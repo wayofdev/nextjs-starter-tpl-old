@@ -11,10 +11,6 @@ on:  # yamllint disable-line rule:truthy
       - master
       - develop
 
-defaults:
-  run:
-    working-directory: app
-
 jobs:
   integration:
     name: Node ${{ matrix.node }} - ${{ matrix.os }}
@@ -33,7 +29,6 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'
-          cache-dependency-path: app/yarn.lock
 
       - name: Load cached frontend dependencies
         id: cached-yarn-dependencies

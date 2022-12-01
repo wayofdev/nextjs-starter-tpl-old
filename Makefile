@@ -142,8 +142,13 @@ ssh:
 # Testing and Code Quality
 # ------------------------------------------------------------------------------------
 lint: ## Run eslint task
-	$(NPM_BIN) lint
+	# $(NPM_BIN) lint
+	$(DOCKER_COMPOSE) exec -T app yarn lint
 .PHONY: lint
+
+lint-staged:
+	$(DOCKER_COMPOSE) exec -T app yarn lint-staged
+.PHONY: lint-staged
 
 test: ## Run unit tests
 	#
