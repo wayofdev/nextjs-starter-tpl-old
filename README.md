@@ -35,7 +35,10 @@ SEO friendly for starting a new project
 * Linter with [ESLint](https://eslint.org/) (default NextJS, NextJS Core Web Vitals, Tailwind CSS and Airbnb configuration)
 * Code formatting with [Prettier](https://prettier.io/)
 * [Husky](https://typicode.github.io/husky/#/) for modern native git hooks
-* 
+* [Github Actions](https://github.com/features/actions) support out of the box
+* SEO metadata, JSON-LD and Open Graph tags with Next SEO
+* [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) - Visualize size of webpack output files with an interactive zoomable treemap
+* Optimized [Lighthouse](https://web.dev/performance-scoring/) performance score
 
 <br>
 
