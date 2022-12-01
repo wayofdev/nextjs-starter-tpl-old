@@ -141,9 +141,9 @@ ssh:
 
 # Testing and Code Quality
 # ------------------------------------------------------------------------------------
-es: ## Run eslint task
+lint: ## Run eslint task
 	$(NPM_BIN) lint
-.PHONY: es
+.PHONY: lint
 
 test: ## Run unit tests
 	#
@@ -152,9 +152,9 @@ test: ## Run unit tests
 
 # Yaml Actions
 # ------------------------------------------------------------------------------------
-lint: ## Lints yaml files inside project
+ylint: ## Lints yaml files inside project
 	yamllint .
-.PHONY: lint
+.PHONY: ylint
 
 
 # Git Actions
