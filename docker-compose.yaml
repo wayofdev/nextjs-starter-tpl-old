@@ -11,8 +11,7 @@ services:
       - default
       - shared
     volumes:
-      - ./app:/app:rw,cached
-      - ./.env:/app/.env
+      - ./:/app:rw,cached
     working_dir: /app
     command: "yarn dev"
     labels:

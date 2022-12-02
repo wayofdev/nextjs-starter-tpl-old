@@ -113,6 +113,7 @@ update:
 # ------------------------------------------------------------------------------------
 up: ## Spin up this project using docker
 	$(DOCKER_COMPOSE) up --remove-orphans -d
+	@echo "🚀 Started and available at https://$(APP_NAME).$(PROJECT_SERVICES_NAMESPACE).docker"
 .PHONY: up
 
 down: ## Stops and removes all project containers
@@ -141,9 +142,18 @@ ssh:
 
 # Testing and Code Quality
 # ------------------------------------------------------------------------------------
-es: ## Run eslint task
-	$(NPM_BIN) lint
-.PHONY: es
+lint: ## Run eslint task
+	# $(NPM_BIN) lint
+	$(DOCKER_COMPOSE) exec -T app yarn lint
+.PHONY: lint
+
+lint-staged:
+	$(DOCKER_COMPOSE) exec -T app yarn lint-staged
+.PHONY: lint-staged
+
+commitlint:
+	$(DOCKER_COMPOSE) exec -T app yarn run --no-install commitlint --edit "${1}"
+.PHONY: commitlint
 
 test: ## Run unit tests
 	#
@@ -152,9 +162,9 @@ test: ## Run unit tests
 
 # Yaml Actions
 # ------------------------------------------------------------------------------------
-lint: ## Lints yaml files inside project
+ylint: ## Lints yaml files inside project
 	yamllint .
-.PHONY: lint
+.PHONY: ylint
 
 
 # Git Actions
