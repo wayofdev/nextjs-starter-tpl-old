@@ -1,12 +1,13 @@
 const config = {
     semi: false,
-    tabWidth: 2,
+    tabWidth: 4,
     printWidth: 120,
     singleQuote: true,
     jsxSingleQuote: true,
-    trailingComma: 'none',
+    trailingComma: 'all',
     arrowParens: 'always',
-    endOfLine: 'auto'
+    endOfLine: 'auto',
+    jsxBracketSameLine: true,
 }
 
 module.exports = config
