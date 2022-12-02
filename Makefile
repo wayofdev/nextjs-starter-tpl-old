@@ -151,6 +151,10 @@ lint-staged:
 	$(DOCKER_COMPOSE) exec -T app yarn lint-staged
 .PHONY: lint-staged
 
+commitlint:
+	$(DOCKER_COMPOSE) exec -T app yarn run --no-install commitlint --edit "${1}"
+.PHONY: commitlint
+
 test: ## Run unit tests
 	#
 .PHONY: test
