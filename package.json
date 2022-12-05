@@ -7,8 +7,9 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "build-types": "tsc --noEmit --pretty",
-        "prepare": "husky install"
+        "check-types": "tsc --noEmit --pretty",
+        "prepare": "husky install",
+        "cz": "cz"
     },
     "dependencies": {
         "@types/node": "18.11.9",
