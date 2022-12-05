@@ -8,7 +8,8 @@
         "start": "next start",
         "lint": "next lint",
         "check-types": "tsc --noEmit --pretty",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "cz": "cz"
     },
     "dependencies": {
         "@types/node": "18.11.9",
