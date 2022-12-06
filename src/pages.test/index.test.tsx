@@ -14,6 +14,7 @@ describe('Index page', () => {
                 name: /Welcome to/,
             })
 
+            // @ts-ignore
             expect(heading).toBeInTheDocument()
         })
     })

@@ -14,7 +14,7 @@
         "format": "next lint --fix && prettier '**/*.{json,yaml}' --write",
         "check-types": "tsc --noEmit --pretty && tsc --project cypress --noEmit --pretty",
         "prepare": "husky install",
-        "cz": "cz",
+        "commit": "cz",
         "test": "jest",
         "cypress": "cypress open",
         "cypress:headless": "cypress run",
@@ -25,10 +25,6 @@
     "dependencies": {
         "@next/bundle-analyzer": "^13.0.6",
         "@next/env": "^13.0.6",
-        "@testing-library/jest-dom": "^5.16.5",
-        "@types/node": "18.11.9",
-        "@types/react": "18.0.25",
-        "@types/react-dom": "18.0.9",
         "classnames": "^2.3.2",
         "eslint": "^8.28.0",
         "next": "13.0.5",
@@ -45,8 +41,11 @@
         "@percy/cli": "^1.16.0",
         "@percy/cypress": "^3.1.2",
         "@testing-library/cypress": "^8.0.7",
+        "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^13.4.0",
-        "@types/testing-library__jest-dom": "^5.14.5",
+        "@types/node": "18.11.9",
+        "@types/react": "18.0.25",
+        "@types/react-dom": "18.0.9",
         "@typescript-eslint/eslint-plugin": "^5.45.0",
         "@typescript-eslint/parser": "^5.45.0",
         "autoprefixer": "^10.4.13",
@@ -80,5 +79,10 @@
         "sass": "^1.56.1",
         "start-server-and-test": "^1.14.0",
         "tailwindcss": "^3.2.4"
+    },
+    "config": {
+        "commitizen": {
+            "path": "@commitlint/cz-commitlint"
+        }
     }
 }
