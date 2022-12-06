@@ -2,25 +2,39 @@
 
 # dependencies
 /node_modules
-/.pnp
+.pnp
 .pnp.js
 
 # testing
-/coverage
+coverage/
+
+# cypress
+cypress/screenshots/
+cypress/videos/
 
 # next.js
-/.next/
-/out/
+.next/
+out/
+
+# next-sitemap
+public/robots.txt
+public/sitemap.xml
+public/sitemap-*.xml
+
+# cache
+.swc/
 
 # production
-/build
+build/
 
 # misc
 .DS_Store
 *.pem
+Thumbs.db
 
 # debug
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
@@ -33,6 +47,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# local folder
+local/
 
 # typescript
 tsconfig.tsbuildinfo
