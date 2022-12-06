@@ -24,6 +24,7 @@ BUILDER_PARAMS ?= docker run --rm -i \
 	--env-file ./.env \
 	--env APP_NAME=$(APP_NAME) \
 	--env SYSTEM_SERVICES_NAMESPACE=$(SYSTEM_SERVICES_NAMESPACE) \
+	--env PROJECT_SERVICES_NAMESPACE=$(PROJECT_SERVICES_NAMESPACE) \
 	--env SHARED_SERVICES_NETWORK=$(SHARED_SERVICES_NETWORK)
 
 BUILDER ?= $(BUILDER_PARAMS) $(SUPPORT_IMAGE)
@@ -108,6 +109,10 @@ update:
 	$(NPM_BIN) upgrade
 .PHONY: update
 
+build:
+	$(NPM_BIN) build
+.PHONY: build
+
 
 # Docker Actions
 # ------------------------------------------------------------------------------------
@@ -156,8 +161,12 @@ commitlint:
 .PHONY: commitlint
 
 test: ## Run unit tests
-	#
+	$(DOCKER_COMPOSE) exec -T app yarn test
 .PHONY: test
+
+format: ## Run prettier formatting
+	$(DOCKER_COMPOSE) exec -T app yarn format
+.PHONY: format
 
 
 # Yaml Actions

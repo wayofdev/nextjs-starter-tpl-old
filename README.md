@@ -26,13 +26,15 @@ This repository contains boilerplate and starter kit written in [Next.js](https:
 -   [NextJS 13.x](https://nextjs.org/blog/next-13)
 -   [Typescript](https://www.typescriptlang.org/) support out of the box
 -   Integrated with [Tailwind CSS](https://tailwindcss.com/)
+-   [PostCSS](https://postcss.org/) for processing Tailwind CSS and [cssnano](https://cssnano.co/) for CSS production optimization
 -   Strict Mode for TypeScript and React 18
 -   Linter with [ESLint](https://eslint.org/) (default NextJS, NextJS Core Web Vitals, Tailwind CSS and Airbnb configuration)
 -   Code formatting with [Prettier](https://prettier.io/)
 -   [Husky](https://typicode.github.io/husky/#/) for modern native git hooks
 -   [Lint-staged](https://github.com/okonet/lint-staged) for running linters on Git staged files
 -   [GitHub Actions](https://github.com/features/actions) support out of the box
--   SEO metadata, JSON-LD and Open Graph tags with Next SEO
+-   SEO metadata, JSON-LD and Open Graph tags with [Next SEO](https://github.com/garmeeh/next-seo)
+-   Sitemap support using [next-sitemap](https://www.npmjs.com/package/next-sitemap)
 -   [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) — Visualize size of webpack output files with an interactive zoomable treemap
 -   Optimized [Lighthouse](https://web.dev/performance-scoring/) performance score
 
@@ -95,6 +97,15 @@ $ make test
 ## 🤝 License
 
 [![Licence](https://img.shields.io/github/license/wayofdev/nextjs-starter-tpl?style=for-the-badge&color=blue)](./LICENSE)
+
+<br>
+
+## 🧱 Credits and Resources
+
+**Inspired by:**
+
+-   [ixartz/next-js-boilerplate](https://github.com/ixartz/Next-js-Boilerplate)
+-   [laravel/breeze-next](https://github.com/laravel/breeze-next)
 
 <br>
 
