@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.1.0](https://github.com/wayofdev/nextjs-starter-tpl/compare/v1.0.0...v1.1.0) (2022-12-06)
+
+
+### Features
+
+* tests and configs ([6dbe85c](https://github.com/wayofdev/nextjs-starter-tpl/commit/6dbe85c90ca476b3dda0e6345be316c62bbf2653))
+
+
+### Bug Fixes
+
+* cant find types for jest-dom ([fdb02fe](https://github.com/wayofdev/nextjs-starter-tpl/commit/fdb02fe214d29d0ab473452f02a90d704113ea6f))
+* dependabot, readme and CI ([b20e967](https://github.com/wayofdev/nextjs-starter-tpl/commit/b20e967587c3dba9b5b7591af6aaf989f1a87efb))
+* types error ([2a9606f](https://github.com/wayofdev/nextjs-starter-tpl/commit/2a9606ff67121cc4a8caa8eaaec44885f94ade02))
+
+
+### Continuous Integration
+
+* use commitlint gh action ([37afc92](https://github.com/wayofdev/nextjs-starter-tpl/commit/37afc9238f8357eb836d238ac473af6ed1471962))
+
 ## 1.0.0 (2022-12-02)
 
 
